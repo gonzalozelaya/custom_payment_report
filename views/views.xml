@@ -40,6 +40,12 @@
         <field name="arch" type="xml">
           <form>
             <sheet>
+              <div class="oe_title">
+                  <h1 invisible="state != 'draft'"><span>Nuevo</span></h1>
+                  <h1 invisible="state == 'draft'"><field name="name" readonly="1"/></h1>
+              </div>
+              <field name="partner_id"/>
+              <field name="date"/>
               <notebook>
                 <page string="Pagos"  options="{'no_create': True}">
                       <field name="paid_payment_ids">

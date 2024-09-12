@@ -9,6 +9,11 @@ class CustomPaymentReport(models.Model):
     
     name = fields.Char(string='',readonly=True)
     
+    date = fields.Date(
+        string='Date', 
+        default=fields.Date.context_today,  # Asigna el día actual por defecto
+    )
+    
     state = fields.Selection([
         ('draft', 'Borrador'),
         ('posted', 'Hecho'), 
