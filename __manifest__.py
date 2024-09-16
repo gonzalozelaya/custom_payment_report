@@ -22,11 +22,13 @@
     # any module necessary for this one to work correctly
     "depends": [
         "account",
-        "account_payment",],
+        "account_payment",
+        "l10n_ar_withholding_ux",
+        "l10n_ar_account_withholding", ],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/custom_payment_report_template.xml',
